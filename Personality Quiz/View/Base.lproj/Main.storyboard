@@ -142,7 +142,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G88-EL-Tsj">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G88-EL-Tsj">
                                                 <rect key="frame" x="231" y="0.0" width="51" height="31"/>
                                             </switch>
                                         </subviews>
@@ -156,7 +156,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qdn-ud-CAr">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qdn-ud-CAr">
                                                 <rect key="frame" x="231" y="0.0" width="51" height="31"/>
                                             </switch>
                                         </subviews>
@@ -170,7 +170,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="and-xX-u8D">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="and-xX-u8D">
                                                 <rect key="frame" x="231" y="0.0" width="51" height="31"/>
                                             </switch>
                                         </subviews>
@@ -184,7 +184,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tf2-46-B6i">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tf2-46-B6i">
                                                 <rect key="frame" x="231" y="0.0" width="51" height="31"/>
                                             </switch>
                                         </subviews>
@@ -320,6 +320,10 @@
                     <navigationItem key="navigationItem" title="Результаты" id="efE-uB-EFv">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="RKH-c1-JgU"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="description2" destination="e6R-Og-PNF" id="lew-gX-Gbh"/>
+                        <outlet property="result" destination="TRp-lP-WGG" id="EX7-tx-u0Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Lo-oB-XGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
