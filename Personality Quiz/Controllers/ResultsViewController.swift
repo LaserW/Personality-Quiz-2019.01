@@ -16,57 +16,33 @@ class ResultsViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var result: UILabel!
+    var north : Int = 0
+    var west : Int = 0
+    var south : Int = 0
+    var east : Int = 0
+    var neutral : Int = 0
+    var who : String = "Север"
     
-   // @IBOutlet weak var description: UILabel!
+    
+    @IBOutlet weak var result: UILabel!
     
     @IBOutlet weak var description2: UILabel!
     
-    var cat : Int = 0
-    var dog : Int = 0
-    var rabbit : Int = 0
-    var turtle : Int = 0
-    var who : String = "Кошка"
-    //var temp = answers
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print (answers?.count)
-        var temp: Int = Int((answers?.count)!) - 1
         
-     for index in 0...temp {
-        //print (answers?[index].type )
-        switch (answers?[index].type)
-        {
-        case (AnimalType.cat)? : cat += 1
-        case (AnimalType.dog)? : dog += 1
-        case (AnimalType.rabbit)? : rabbit += 1
-        case (AnimalType.turtle)? : turtle += 1
-            
-        default : break
-            
-        }
-    }
-        print(cat, dog, rabbit, turtle)
-        // Do any additional setup after loading the view.
-        if (cat >= dog) && (cat >= rabbit) && (cat >= turtle) {
-            who = "Кошка"
-            description2.text = AnimalType.cat.definition
-        }
-        if (dog >= cat) && (dog >= rabbit) && (dog >= turtle) {
-            who = "Собака"
-            description2.text = AnimalType.dog.definition
-        }
-        if (rabbit >= cat) && (rabbit >= dog) && (rabbit >= turtle) {
-            who = "Кролик"
-            description2.text = AnimalType.rabbit.definition
-        }
-        if (turtle >= cat) && (turtle >= dog) && (turtle >= rabbit) {
-            who = "Черепаха"
-            description2.text = AnimalType.turtle.definition
-        }
+        print (answers?.count)
+        
+        count()
+        
+        print(north, west, south, east)
+        
+        description2.text = chose()
         
         result.text = "Вы - " + who + "!"
+        
+        
     }
     
 
@@ -79,5 +55,42 @@ class ResultsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func count() {
+        var temp: Int = Int((answers?.count)!) - 1
+        for index in 0...temp {
+            //print (answers?[index].type )
+            switch (answers?[index].type)
+            {
+            case (AnimalType.north)? : north += 1
+            case (AnimalType.west)? : west += 1
+            case (AnimalType.south)? : south += 1
+            case (AnimalType.east)? : east += 1
+            case (AnimalType.neutral)? : neutral += 1
+            default : break
+                
+            }
+        }
+    }
+    
+    func chose() -> String {
+        if (north >= west) && (north >= south) && (north >= east) {
+            who = "Север"
+            return AnimalType.north.definition
+        }
+        if (west >= north) && (west >= south) && (west >= east) {
+            who = "Запад"
+            return AnimalType.west.definition
+        }
+        if (south >= north) && (south >= west) && (south >= east) {
+            who = "Юг"
+            return AnimalType.south.definition
+        }
+        if (east >= north) && (east >= west) && (east >= south) {
+            who = "Восток"
+            return AnimalType.east.definition
+        }
+        return ""
+    }
+    
+    
 }
